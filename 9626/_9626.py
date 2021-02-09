@@ -39,10 +39,3 @@ for j in range(D):
     if j == (D-1):
         break
     print()
-
-a = ['b', 'c']
-
-print(a[0])
-print(type(a[0]))
-print(a[1])
-print(type(a[1]))
