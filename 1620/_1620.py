@@ -25,7 +25,3 @@ for j in range(M):
         print(pd_idx_to_value[int(quiz)])
     except:
         print(pd_value_to_idx[quiz])
-
-Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle 
-Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto 
-Pidgeot Rattata Raticate Spearow Fearow Ekans Arbok Pikachu Raichu
