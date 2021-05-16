@@ -16,17 +16,16 @@ dp[1][1] = [1]
 
 for i in range(2, N+1):
     dp[i][0] = dp[i-1][0] + 1 # case : 1을 뺀다
-    dp[i][1] = dp[i-1][1] + [i]
+    dp[i][1] = [i] + dp[i-1][1]
 
     if i%2 == 0 and dp[i//2][0]+1 < dp[i][0]: # case : 2로 나누어 떨어지면 2로 나눈다
         dp[i][0] = dp[i//2][0] + 1
-        dp[i][1] = dp[i//2][1] + [i]
+        dp[i][1] = [i] + dp[i//2][1] 
         
     if i%3 == 0 and dp[i//3][0]+1 < dp[i][0]: # case : 3으로 나누어 떨어지면 3으로 나눈다.
         dp[i][0] = dp[i//3][0] + 1
-        dp[i][1] = dp[i//3][1] + [i]
+        dp[i][1] = [i] + dp[i//3][1]
         
-
 print(dp[N][0])
-for i in dp[N][1][::-1]:
+for i in dp[N][1]:
     print(i, end= ' ')
