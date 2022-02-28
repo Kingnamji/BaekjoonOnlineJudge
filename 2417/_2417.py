@@ -11,9 +11,13 @@ Original file is located at
 
 N = int(input())
 
-square_N = N**0.5
+start, end = 0, N
 
-if square_N % 1 == 0:
-    print(int(square_N))
-else:
-    print(int(square_N) + 1)
+while start <= end:
+    mid = (start + end) // 2
+    if mid ** 2 < N:
+        start = mid + 1
+    else:
+        end = mid - 1
+
+print(start)
